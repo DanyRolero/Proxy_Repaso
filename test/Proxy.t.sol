@@ -40,7 +40,7 @@ contract ProxyTest is Test {
     //--------------------------------------------------------------------------------
     /// @notice expected 6 - 3 but is 6 * 3
     function test_wrong_substraction() public {
-        uint256 result = ICalculator(address(proxy)).addition(1, 2);
+        uint256 result = ICalculator(address(proxy)).substraction(num1, num2);
         assertFalse(result == 3);
     }
 
@@ -54,7 +54,7 @@ contract ProxyTest is Test {
     //--------------------------------------------------------------------------------
     /// @notice expected 6 / 3 but is 6 - 3
     function test_wrong_division() public {
-        uint256 result = ICalculator(address(proxy)).addition(num1, num2);
+        uint256 result = ICalculator(address(proxy)).division(num1, num2);
         assertFalse(result == 2);
     }
 
@@ -70,7 +70,7 @@ contract ProxyTest is Test {
     /// @notice expected 6 - 3
     function test_correct_substraction() public {
         proxy.upgrade(address(implementation2));
-        uint256 result = ICalculator(address(proxy)).addition(num1, num2);
+        uint256 result = ICalculator(address(proxy)).substraction(num1, num2);
         assertEq(result, 3);
     }
 
@@ -78,7 +78,7 @@ contract ProxyTest is Test {
     /// @notice expected 6 x 3
     function test_correct_multiplication() public {
         proxy.upgrade(address(implementation2));
-        uint256 result = ICalculator(address(proxy)).addition(num1, num2);
+        uint256 result = ICalculator(address(proxy)).multiplication(num1, num2);
         assertEq(result, 18);
     }
 
@@ -86,7 +86,7 @@ contract ProxyTest is Test {
     /// @notice expected 6 / 3
     function test_correct_division() public {
         proxy.upgrade(address(implementation2));
-        uint256 result = ICalculator(address(proxy)).addition(num1, num2);
+        uint256 result = ICalculator(address(proxy)).division(num1, num2);
         assertEq(result, 2);
     }
 }
