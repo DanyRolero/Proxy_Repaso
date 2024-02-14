@@ -1,0 +1,26 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+import {Script, console} from "forge-std/Script.sol";
+
+/// @dev Indicar ruta del contrto a desplegar
+import "../src/02_UUPS_Proxy/Proxy.sol";
+
+contract DeploymentScript is Script {
+    function setUp() public {}
+
+    function run() public {
+        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
+        address account = vm.addr(deployerPrivateKey);
+
+        vm.startBroadcast(deployerPrivateKey);
+
+        /// @dev Instanciar contrato para ejecutar el despliegue
+        UUPSProxy proxy = new UUPSProxy(0x5C2c649f85978a5AB0fDad76eAc6B30f36895fFa, "");
+
+        /// @dev Obtener la dirección del contrato recién desplegado
+        console.log(account);
+
+        vm.stopBroadcast();
+    }
+}

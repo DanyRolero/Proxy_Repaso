@@ -3,8 +3,8 @@ pragma solidity ^0.8.13;
 
 import "lib/forge-std/src/Test.sol";
 import "../src/02_UUPS_Proxy/Proxy.sol";
-import "../src/02_UUPS_Proxy/CalculatorV1.sol";
-import "../src/02_UUPS_Proxy/CalculatorV2.sol";
+import "../src/02_UUPS_Proxy/ImplementationV1.sol";
+import "../src/02_UUPS_Proxy/ImplementationV2.sol";
 
 //----------------------------------------------------------------------------------------------
 interface ICalculator {

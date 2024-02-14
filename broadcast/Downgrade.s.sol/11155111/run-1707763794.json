@@ -1,0 +1,34 @@
+{
+  "transactions": [
+    {
+      "hash": "0xb4dd8e1baf2269261830c3e490c26629e35a13a68c7bf648c532fd94824fb331",
+      "transactionType": "CALL",
+      "contractName": "UUPSProxy",
+      "contractAddress": "0xA7B6bDf28107EE4e7714cC7a23913f19c2A9db91",
+      "function": null,
+      "arguments": null,
+      "transaction": {
+        "type": "0x02",
+        "from": "0x9b1c3e0db81e42d1a00728739ecb6d7c9edf4586",
+        "to": "0xa7b6bdf28107ee4e7714cc7a23913f19c2a9db91",
+        "gas": "0xae09",
+        "value": "0x0",
+        "data": "0x4f1ef2860000000000000000000000007916bf0627fbf23210be41e23ace7bc9a1fa463700000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000",
+        "nonce": "0x108",
+        "accessList": []
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    }
+  ],
+  "receipts": [],
+  "libraries": [],
+  "pending": [
+    "0xb4dd8e1baf2269261830c3e490c26629e35a13a68c7bf648c532fd94824fb331"
+  ],
+  "returns": {},
+  "timestamp": 1707763794,
+  "chain": 11155111,
+  "multi": false,
+  "commit": "94b0198"
+}
